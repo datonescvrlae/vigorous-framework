@@ -19,6 +19,8 @@ local module = {}
 
 function module:Start(localDirectory: PlayerScripts | ServerScriptService)
        
+
+	Vigorous.IsLoaded = true -- After loading set this key to true
 end
 
 return module

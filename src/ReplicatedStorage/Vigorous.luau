@@ -47,7 +47,7 @@ function module:GetModule(moduleName: string): { [any]: any }?
 
 	local Module = moduleRegistry[moduleName]
 
-	-- If not module with the name is found and ONLY if core is still in the loading phase
+	-- If no module with the name is found and ONLY if core is still in the loading phase
 	-- then we insert a temporary module table into the registry
 
 	-- This allows using :GetModule() at the top of the script even if the module is registered later
