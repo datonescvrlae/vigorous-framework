@@ -29,8 +29,7 @@ function module:Register(moduleName: string, moduleData: { [any]: any}? ): { [an
 	-- If a module is already in the registry that means a script already tried to fetch it
 	-- and so we NEED to use that stored table instead of a completely fresh one
 	local Module = moduleRegistry[moduleName] or {}
-
-	Module.System = {} -- Table for things like the constructor function and so on
+	Module.System = {}
 	Module.ClassName = moduleName
 
 	-- Copy all keys and their values from the given data into our Module var
