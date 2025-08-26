@@ -15,7 +15,7 @@
 --]]
 
 local module = {
-	IsLoaded = false -- Defines whether the core is fully loaded or not
+	IsLoaded = false --// Defines whether the core is fully loaded or not
 }
 
 local moduleRegistry = {}
