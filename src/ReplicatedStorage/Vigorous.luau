@@ -33,6 +33,7 @@ function module:Register(moduleName: string, moduleData: { [any]: any}? ): { [an
 	Module.System = {} -- Table for things like the constructor function and so on
 	Module.ClassName = moduleName
 
+	-- Copy all keys and their values from the given data into our Module var
 	for key, value in moduleData or {} do
 		Module[key] = value
 	end
