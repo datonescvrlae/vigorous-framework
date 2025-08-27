@@ -30,7 +30,7 @@ function module:Register(moduleName: string, moduleData: { [any]: any}? ): { [an
 	--// and so we NEED to use that stored table instead of a completely fresh one
 	local Module = moduleRegistry[moduleName] or {}
 	Module.System = {}
-	Module.ClassName = moduleName
+	Module.ClassName = moduleName --// Calling it class name cause it's more common in OOP
 
 	--// Copy all keys and their values from the given data into our Module var
 	for key, value in moduleData or {} do
