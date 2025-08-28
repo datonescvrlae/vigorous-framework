@@ -14,6 +14,6 @@
 
 --]]
 
-local Initializer = require(game.ReplicatedStorage.Vigorous.Initializer)
+local Initializer = require(game.ReplicatedStorage.Core.Initializer)
 
 Initializer:Start(game.Players.LocalPlayer.PlayerScripts)
