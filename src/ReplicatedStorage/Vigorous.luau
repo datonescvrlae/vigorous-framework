@@ -15,6 +15,10 @@
 --]]
 
 local module = {
+	--// Information about the framework for debugging purposes
+	--// The versioning format is YEAR.MONTH.PATCH and optionally "dev" for pre-releases
+	Version = "2025.08.1-dev",
+
 	IsLoaded = false --// Defines whether the core is fully loaded or not
 }
 
