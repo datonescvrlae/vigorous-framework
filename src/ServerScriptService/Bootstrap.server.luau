@@ -10,7 +10,7 @@
 	▒██████▒▒▒ ▓███▀ ░ ▒▀█░  ░██▓ ▒██▒░██████▒▓█   ▓██▒░▒████▒
 
 	This script is part of the Vigorous framework owned and maintained by Scvrlae (@datonescvrlae).
-	It is private and only given out to select individuals that want it!
+	It is public and available for use by anyone for their games!
 
 --]]
 
