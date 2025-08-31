@@ -24,7 +24,7 @@ local module = {
 
 local moduleRegistry = {}
 
-function module:Register(moduleName: string, moduleData: { [any]: any }? ): { [any]: any }
+function module:Register(moduleName: string, moduleData: { [any]: any }?): { [any]: any }
 	if typeof(moduleName) ~= "string" then return end
 	if moduleData and typeof(moduleData) ~= "table" then return end
 
