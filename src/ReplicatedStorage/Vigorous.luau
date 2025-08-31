@@ -17,14 +17,14 @@
 local module = {
 	--// Information about the framework for debugging purposes
 	--// The versioning format is YEAR.MONTH.PATCH and optionally "dev" for pre-releases
-	Version = "2025.08.1-dev",
+	Version = "2025.09.1-dev",
 
 	IsLoaded = false --// Defines whether the core is fully loaded or not
 }
 
 local moduleRegistry = {}
 
-function module:Register(moduleName: string, moduleData: { [any]: any}? ): { [any]: any }
+function module:Register(moduleName: string, moduleData: { [any]: any }? ): { [any]: any }
 	if typeof(moduleName) ~= "string" then return end
 	if moduleData and typeof(moduleData) ~= "table" then return end
 
