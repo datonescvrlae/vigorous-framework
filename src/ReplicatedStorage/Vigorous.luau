@@ -58,7 +58,7 @@ function module:GetModule(moduleName: string): { [any]: any }?
 	if not Module and not module.IsLoaded then
 		local TempModule = {}
 
-		moduleRegistry[moduleName] = TempModule --// Add the temporary module to the registry
+		moduleRegistry[moduleName] = TempModule
 		return TempModule
 	end
 
