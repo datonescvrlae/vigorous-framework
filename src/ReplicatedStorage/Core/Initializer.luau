@@ -48,7 +48,7 @@ local function LoadModuleScript(moduleScript: ModuleScript)
 end
 
 function module:Start(localDirectory: PlayerScripts | ServerScriptService)
-       local directoriesToLoad = {
+    local directoriesToLoad = {
 	--// The order all of these are in is very important
 	--// We wanna make sure local directories are loaded before the shared ones
 		localDirectory.Core,
