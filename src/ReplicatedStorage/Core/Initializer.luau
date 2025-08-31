@@ -41,6 +41,10 @@ local function LoadModuleScript(moduleScript: ModuleScript)
 			return ConstructObject(Module, ...)
 		end
 	end
+
+	if Module.System.Require then
+		Module.System:Require() --// Run the require system function
+	end
 end
 
 function module:Start(localDirectory: PlayerScripts | ServerScriptService)
