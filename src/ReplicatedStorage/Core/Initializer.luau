@@ -40,7 +40,7 @@ local function LoadModuleScript(moduleScript: ModuleScript)
 		Module.new = function(...: any?): { [any]: any }
 			return ConstructObject(Module, ...)
 		end
-	end
+	end --// Please don't laugh at my way of implementing OOP if it works it works alright
 
 	if Module.System.Require then
 		Module.System:Require() --// Run the require system function
