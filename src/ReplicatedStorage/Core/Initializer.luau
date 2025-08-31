@@ -17,6 +17,10 @@
 local Vigorous = require(game.ReplicatedStorage.Vigorous)
 local module = {}
 
+local function ConstructObject(Module: { [any]: any }, ...: any?): { [any]: any }
+	
+end
+
 local function LoadModuleScript(moduleScript: ModuleScript)
 	--// The pcall here helps us catch any errors the scripts might experience during requiring
 	--// It's important we know this to know if we should proceed with processing
@@ -25,7 +29,18 @@ local function LoadModuleScript(moduleScript: ModuleScript)
 		Module = require(moduleScript) --// Attempt to require the module
 	end)
 
+	--// Skip the processing for this module if it fails or doesn't have a system table
+	if not success or not Module.System then return end
+
+	if Module.System.new then
+	--// We wanna abstract Module.new() to only take arguments needed for construction of the object
 	
+	--// To do so we need to set it to a new function that only takes those arguments
+	--// and then inside we call the actual constructor that also takes the module as an additional argument
+		Module.new = function(...: any?): { [any]: any }
+			return ConstructObject(Module, ...)
+		end
+	end
 end
 
 function module:Start(localDirectory: PlayerScripts | ServerScriptService)
