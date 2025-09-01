@@ -18,7 +18,15 @@ local Vigorous = require(game.ReplicatedStorage.Vigorous)
 local module = {}
 
 local function ConstructObject(Module: { [any]: any }, ...: any?): { [any]: any }
-	
+	--// Create a clone of the class module and use that as a base for the new object
+	local NewObject = table.clone(Module)
+
+	NewObject.new = nil --// We dont need it to have the .new() function
+
+	--// Finally call the system constructor function and return the new object
+	--// We don't need to reassign the NewObject var here btw
+	Module.System.new(NewObject, ...)
+	return NewObject
 end
 
 local function LoadModuleScript(moduleScript: ModuleScript)
