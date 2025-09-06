@@ -17,7 +17,7 @@
 local Vigorous = require(game.ReplicatedStorage.Vigorous) --// Core module of the Vigorous framework
 local module = Vigorous:Register("Core.Console")
 
-local LogLevel = Vigorous:GetModule("Core.LogLevel") --// Class holding all the unique log levels
+local LogLevel = Vigorous:GetModule("Core.LogLevel")
 
 function module.log(logLevel: string, message: string)
        if typeof(message) ~= "string" or typeof(logLevel) ~= "string" then return end
@@ -35,8 +35,10 @@ function module.log(logLevel: string, message: string)
        --// Only then we can go ahead and grab the last position which is the script's name
               local sourceArray = string.split(debug.info(2, "s"), ".")
               local logSource = sourceArray[#sourceArray]
-
+              
               local concatMessage = timestamp .."[".. logLevel .."/".. logSource .."]: ".. message
+
+              NewLogLevel.log(concatMessage) --// Log using the correct logger
        end
 end
 
