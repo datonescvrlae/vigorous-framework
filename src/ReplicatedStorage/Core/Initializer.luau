@@ -14,7 +14,7 @@
 
 --]]
 
-local Vigorous = require(game.ReplicatedStorage.Vigorous)
+local Vigorous = require(game.ReplicatedStorage.Vigorous) --// Core module of the Vigorous framework
 local module = {}
 
 local function ConstructObject(Module: { [any]: any }, ...: any?): { [any]: any }
