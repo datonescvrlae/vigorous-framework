@@ -37,7 +37,6 @@ function module.log(logLevel: string, message: string)
               local logSource = sourceArray[#sourceArray]
               
               local concatMessage = timestamp .."[".. logLevel .."/".. logSource .."]: ".. message
-
               NewLogLevel.log(concatMessage) --// Log using the correct logger
        end
 end
