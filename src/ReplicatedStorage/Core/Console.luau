@@ -27,7 +27,7 @@ function module.log(logLevel: string, message: string)
        --// Make sure that the given log level is a valid one aka we have an object
        --// If the log level object is nil that means it was invalid
        if NewLogLevel then
-              local timestamp = os.date("[%H:%M:%S] ")
+              local timestamp = os.date("[%H:%M:%S]")
 
        --// We can get the script that called the .log() function through the debug library
 
@@ -36,7 +36,7 @@ function module.log(logLevel: string, message: string)
               local sourceArray = string.split(debug.info(2, "s"), ".")
               local logSource = sourceArray[#sourceArray]
               
-              local concatMessage = timestamp .."[".. logLevel .."/".. logSource .."]: ".. message
+              local concatMessage = timestamp .." [".. logSource .."/".. logLevel .."]: ".. message
 
        --// Log the concated message using the correct logger function
               NewLogLevel.log(concatMessage)
