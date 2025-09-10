@@ -32,7 +32,7 @@ function module.log(logLevel: string, message: string)
        --// We can get the script that called the .log() function through the debug library
 
        --// It's important to note that that will return the whole path that we need to split first
-       --// Only then we can go ahead and grab the last position which is the script's name
+       --// Only then we can go ahead and grab the last position which is the script's name (NOT VIGOROUS CLASS NAME!)
               local sourceArray = string.split(debug.info(2, "s"), ".")
               local logSource = sourceArray[#sourceArray]
               
