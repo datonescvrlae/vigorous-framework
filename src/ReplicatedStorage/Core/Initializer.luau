@@ -77,8 +77,6 @@ function module:Start(localDirectory: PlayerScripts | ServerScriptService)
 		end
 	end
 
-	Vigorous:GetModule("Core.Console").log("Test", "test")
-
 	Vigorous.IsLoaded = true --// After loading set this key to true
 end
 
